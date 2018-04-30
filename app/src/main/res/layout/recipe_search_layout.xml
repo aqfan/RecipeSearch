@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="20dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:maxHeight="300dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/image"
+        android:layout_alignEnd="@id/image"
+        android:layout_alignBottom="@id/image"
+        android:gravity="bottom|center_horizontal"
+        android:text=""
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        android:background="#B3E5E5E5"/>
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/add_recipe"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignTop="@id/image"
+        android:layout_alignEnd="@id/image"
+        android:src="@mipmap/ic_add_black_24dp"
+        android:visibility="visible"
+        app:cb_color="#99CC00"
+        app:cb_pressedRingWidth="8dip" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/delete_recipe"
+        android:layout_width="64dip"
+        android:layout_height="64dip"
+        android:layout_alignTop="@id/image"
+        android:layout_alignEnd="@id/image"
+        android:src="@mipmap/ic_delete_black_24dp"
+        android:visibility="invisible"
+        app:cb_color="#99CC00"
+        app:cb_pressedRingWidth="8dip" />
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/edit_ingredient">
+        <EditText
+            android:id="@+id/ingredient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="15dp"
+            android:inputType="text"
+            android:textSize="20sp"
+            tools:text="Name" />
+
+        <EditText
+            android:id="@+id/ingredient_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ingredient_name"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:inputType="numberDecimal"
+            android:textSize="15sp"
+            tools:text="Amount" />
+
+        <EditText
+            android:id="@+id/ingredient_expiration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/ingredient_name"
+            android:inputType="date"
+            android:textSize="15sp"
+            tools:text="Expiration" />
+    </RelativeLayout>
+
+
+
+    <ImageButton
+        android:id="@+id/edit_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_ingredient"
+        android:background="?selectableItemBackground"
+        android:padding="16dp"
+        android:visibility="visible"
+        android:src="@mipmap/ic_mode_edit_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/save_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@id/delete_ingredient"
+        android:background="?selectableItemBackground"
+        android:padding="16dp"
+        android:visibility="invisible"
+        android:src="@mipmap/ic_check_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/delete_ingredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="?selectableItemBackground"
+        android:padding="16dp"
+        android:visibility="visible"
+        android:src="@mipmap/ic_delete_black_24dp" />
+
+    <CheckBox
+        android:id="@+id/shopping_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:padding="16dp"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
